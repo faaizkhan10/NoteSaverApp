@@ -66,17 +66,19 @@ Create a `.env` file in the backend directory:
 
 ```bash
 cd backend
-cp config.env .env
+cp config.example.env .env
 ```
 
 Update the `.env` file with your configuration:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/notesaver
+MONGODB_URI=mongodb+srv://your_username:your_password@your_cluster.mongodb.net/notesaver?retryWrites=true&w=majority
 JWT_SECRET=your_jwt_secret_key_here_make_it_long_and_secure
 JWT_EXPIRE=7d
 ```
+
+**⚠️ Security Note**: Never commit your actual `.env` file to git. The `.gitignore` file is configured to exclude it.
 
 ### 5. Start MongoDB
 
