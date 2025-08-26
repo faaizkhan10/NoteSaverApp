@@ -6,7 +6,7 @@ import authRoutes from "./routes/auth.js";
 import pasteRoutes from "./routes/pastes.js";
 
 // Load environment variables
-dotenv.config({ path: "./config.env" });
+dotenv.config();
 
 const app = express();
 
