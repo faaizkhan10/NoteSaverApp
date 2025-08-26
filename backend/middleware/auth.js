@@ -48,3 +48,4 @@ export const generateToken = (id) => {
     expiresIn: process.env.JWT_EXPIRE,
   });
 };
+

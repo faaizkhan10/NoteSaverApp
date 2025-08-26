@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { Toaster } from "react-hot-toast";
 import "./App.css";
-import { store } from "./store";
+import store from "./store";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Paste from "./components/Paste";

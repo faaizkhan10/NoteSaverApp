@@ -50,6 +50,7 @@ cd NoteSaver
 ### 2. Install Frontend Dependencies
 
 ```bash
+cd frontend
 npm install
 ```
 
@@ -67,6 +68,13 @@ Create a `.env` file in the backend directory:
 ```bash
 cd backend
 cp config.example.env .env
+```
+
+Create a `.env` file in the frontend directory:
+
+```bash
+cd frontend
+cp env.example .env
 ```
 
 Update the `.env` file with your configuration:
@@ -105,6 +113,7 @@ The backend will start on `http://localhost:5000`
 
 ```bash
 # In a new terminal, from the root directory
+cd frontend
 npm run dev
 ```
 
@@ -162,13 +171,13 @@ The frontend will start on `http://localhost:5173`
 
 ### Environment Variables for Production
 
-**Frontend (.env):**
+**Frontend (frontend/.env):**
 
 ```env
 VITE_API_URL=https://your-backend-url.com/api
 ```
 
-**Backend (.env):**
+**Backend (backend/.env):**
 
 ```env
 PORT=5000
@@ -181,16 +190,20 @@ JWT_EXPIRE=7d
 
 ```
 NoteSaver/
-├── src/                    # Frontend source code
-│   ├── components/         # React components
-│   ├── redux/             # Redux store and slices
+├── frontend/              # Frontend source code
+│   ├── src/              # React source code
+│   │   ├── components/   # React components
+│   │   ├── redux/        # Redux store and slices
+│   │   └── ...
+│   ├── public/           # Static assets
+│   ├── package.json      # Frontend dependencies
 │   └── ...
-├── backend/               # Backend source code
-│   ├── models/           # MongoDB models
-│   ├── routes/           # API routes
-│   ├── middleware/       # Custom middleware
+├── backend/              # Backend source code
+│   ├── models/          # MongoDB models
+│   ├── routes/          # API routes
+│   ├── middleware/      # Custom middleware
 │   └── ...
-└── ...
+└── README.md            # Project documentation
 ```
 
 ## Contributing
@@ -207,4 +220,4 @@ This project is licensed under the MIT License.
 
 ## Support
 
-For support, email support@notesaver.com or create an issue in the repository.
+For support, email faaizkhanrampur@gmail.com or create an issue in the repository.
